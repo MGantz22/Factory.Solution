@@ -1,8 +1,8 @@
-# PROJECT NAME 
+# Factory Management 
 
 #### By Mitchell Gantz
 
-An application to track students and courses for a fictional university.
+An application to track engineers and machines for a fictional factory.
 
 ## Technologies Used
 
@@ -29,18 +29,18 @@ dotnet tool install --global dotnet-ef --version 6.0.0
 
 1. Clone this repo to your workspace.
 
-2. Navigate to the `PROJECTNAME` directory.
+2. Navigate to the `Factory` directory.
 
 3. Create a file named `appsettings.json` with the following code. Be sure to update the Default Connection to your MySQL credentials.
 ```
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=NAME;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];",
+    "DefaultConnection": "Server=localhost;Port=3306;database=factory;uid=root;pwd=epicodus;",
   }
 }
 ```
 
-4. Install dependencies within the `PROJECTNAME` directory
+4. Install dependencies within the `Factory` directory
 ```
 $ dotnet restore
 ````
