@@ -1,0 +1,42 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Factory.Models
+@model Factory.Models.Engineer
+
+@if(Model.JoinEntities.Count ==0)
+{
+  <h4> @Html.DisplayFor(model => model.Name) is not assigned to any machines!</h4>
+  <p>Add one using the dropdown list below:</p>
+}
+<ul>
+  @if(@Model.JoinEntities.Count != 0)
+  {
+    <p>@Html.DisplayFor(model => Model.Name) is assigned to the following machines already:</p>
+  }
+
+  @foreach (EngineerMachine join in Model.JoinEntities)
+  {
+    <li><strong>@join.Machine.Name</strong></li>
+    @using (Html.BeginForm("DeleteJoin", "Machines"))
+    {
+      @Html.Hidden("joinId", @join.EngineerMachineId)
+      <input type="submit" value="Delete"/>
+    }
+  }
+</ul>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.EngineerId)
+  @Html.Label("Select Machine")
+  @Html.DropDownList("MachineId")
+
+  <input type="submit" value="Save" />
+}
+<br>
+<a href='@Url.Action("Index")'>
+    <button type="button">Back to List</button>
+</a>
+
