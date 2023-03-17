@@ -27,6 +27,11 @@ else
     }
     </ul>
 }
+
+  <a href='@Url.Action("AddMachine", new { id = Model.EngineerId })'>
+    <button type="button">Assign a Machine</button>
+  </a>
+
 <a href='@Url.Action("Delete", new { id = Model.EngineerId })'>
     <button type="button">Delete Engineer</button>
 </a>
