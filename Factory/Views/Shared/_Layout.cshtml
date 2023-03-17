@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>@ViewBag.PageTitle</title>
-    <link 
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
-      crossorigin="anonymous">
-    <link rel="stylesheet" href="~/css/styles.css">
-  </head>
-  <body>
-    @await Html.PartialAsync("Header")
-    @await Html.PartialAsync("Sidebar")
-    @RenderBody()
-    @await Html.PartialAsync("Footer")
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Gantz</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="~/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+  <a class="navbar-brand">Factory Index | </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+        <a class="nav-link enlarge" href='/'>Home</a>
+        <a class="nav-link enlarge" href='/Engineers'>Engineers</a> 
+        <a class="nav-link enlarge" href='/Machines'>Machines</a>
+  </div>
+</nav>
+<div class="jumbotron text-center">
+  <h1 class="display-1">Gantz</h1>
+  <p class="lead">Factory Management Systems</p>
+</div>
+<div class="container">
+  @RenderBody()
+</div>
+</body>
+
 </html>
