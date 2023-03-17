@@ -6,7 +6,7 @@
 @model Factory.Models.Machine
 <h2>Machine Details:</h2>
 <hr>
-<h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayNameFor(model => model.Name)</h4>
+<h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
 <br>
 
 @if(@Model.JoinEntities.Count ==0)
