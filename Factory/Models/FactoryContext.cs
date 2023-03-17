@@ -4,9 +4,9 @@ namespace Factory.Models
 {
   public class FactoryContext : DbContext
   {
-    public dbSet<Engineer> Engineers { get; set; }
-    public dbSet<Machine> Machines { get; set; }
-    public dbSet<EngineerMachine> EngineerMachines { get; set; }
+    public DbSet<Engineer> Engineers { get; set; }
+    public DbSet<Machine> Machines { get; set; }
+    public DbSet<EngineerMachine> EngineerMachines { get; set; }
     public FactoryContext(DbContextOptions options) : base(options) { }
   }
 }
