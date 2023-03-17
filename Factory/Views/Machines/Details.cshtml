@@ -12,9 +12,7 @@
 @if(@Model.JoinEntities.Count ==0)
 {
     <p>No engineer is assigned to this machine!</p>
-    <a href='@Url.Action("AddEngineer", new { id = Model.MachineId })'>
-    <button type="button">Assign an Engineer</button>
-  </a>
+   
 }
 else
 {
@@ -31,6 +29,9 @@ else
         }
     </ul>
 }
+ <a href='@Url.Action("AddEngineer", new { id = Model.MachineId })'>
+    <button type="button">Assign an Engineer</button>
+</a>
 <a href='@Url.Action("Delete", new { id = Model.MachineId })'>
     <button type="button">Delete Machine</button>
 </a>
