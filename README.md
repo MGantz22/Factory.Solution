@@ -69,7 +69,7 @@ $ dotnet restore
 
 ## Furture Implementations
 - _Custom backgrounds for each page_
-- _Interavtive page_
+- _Interacvtive page_
 - _More styling_
 
 
