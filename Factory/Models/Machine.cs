@@ -8,6 +8,6 @@ namespace Factory.Models
     public int MachineId { get; set; }
     [Required(ErrorMessage = "ERROR cannot leave this blank! Give it another go.")]
     public string Name { get; set; }
-    public List<EngineeMachine> JoinEntities { get; }
+    public List<EngineerMachine> JoinEntities { get; }
   }
 }
